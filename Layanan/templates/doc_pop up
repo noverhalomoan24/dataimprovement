@@ -1,0 +1,255 @@
+ <div class="card_feeling">
+            <div class="card1">
+                <div class="card_pic">
+<!--                    <div class="backgrounds">-->
+<!--                        <img src="https://i.pinimg.com/736x/98/96/69/989669de7c7b5295a0200a58b1d0bd83.jpg" alt="" class="back_card" >-->
+<!--                    </div>-->
+                    <div class="foto_feeling">
+                        <img src="http://3.bp.blogspot.com/-SlAxe4NXYG0/UDUsvXLpotI/AAAAAAAABhs/Grt0dM1MqxQ/s1600/hutanindonesia.jpg" alt="" class="image_card">
+                    </div>
+
+                </div>
+                <div class="desc_card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis</div>
+            </div>
+
+            <div class="card1">
+                <div class="card_pic">
+<!--                    <div class="backgrounds">-->
+<!--                        <img src="https://i.pinimg.com/736x/98/96/69/989669de7c7b5295a0200a58b1d0bd83.jpg" alt="" class="back_card" >-->
+<!--                    </div>-->
+                    <div class="foto_feeling">
+                        <img src="http://3.bp.blogspot.com/-SlAxe4NXYG0/UDUsvXLpotI/AAAAAAAABhs/Grt0dM1MqxQ/s1600/hutanindonesia.jpg" alt="" class="image_card">
+                    </div>
+
+                </div>
+                <div class="desc_card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="pop_layanan" id="pop_up_layanan">
+            <div class="white_layanan">
+                <div class="image_upload">
+                    <img src="/static/image/cakep.jpg" alt="" class="image_up_ly" id="profile_image">
+                    <input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+                    <a href="#" id="select_photos"><div class="btn_upload_photos">
+                            Browse
+                    </div></a>
+                </div>
+                <div class="btn_upload">
+                    <div class="cancel_btn">
+                        <button class="btn_keluar">Cancel</button>
+                    </div>
+                    <div class="submit_btn">
+                        <button class="btn_masuk">Submit</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+css -->
+
+
+/*bagian dari pop */
+.pop_layanan{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:-10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-bottom:-50px;
+    z-index:10;
+}
+
+/*bagian ini perlu untuk pop up*/
+.fixed-top{
+    z-index:0;
+}
+
+.white_layanan{
+    width:350px;
+    height:310px;
+    background:white;
+    margin:auto;
+    border-radius:10px;
+    margin-top:10%;
+    padding:10px;
+}
+
+.image_upload{
+    position:absolute;
+    padding:40px;
+    margin-left:40px;
+}
+.image_up_ly{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+}
+
+
+.image_upload .btn_upload_photos{
+    width:100px;
+    height:30px;
+    background-color:#CAD6E2;
+    padding-left:20px;
+    margin-top:10px;
+    margin-left:25px;
+    border-radius:10px;
+    position:absolute;
+}
+
+.btn_upload_photos #select_photos{
+    text-decoration:none;
+}
+
+.btn_upload{
+    bottom:240px;
+    width:320px;
+    margin-left:-10px;
+    margin-top:83%;
+}
+.btn_upload .cancel_btn{
+    position:fixed;
+
+}
+.btn_upload .cancel_btn .btn_keluar{
+    width:100px;
+    background-color:#464646;
+    border: 1px solid #464646;
+    border-radius:5px;
+
+}
+.btn_upload .submit_btn .btn_masuk{
+    background-color:#374B85;
+    width:100px;
+    border: 1px solid #B85;
+    border-radius:5px;
+
+}
+
+.btn_upload .submit_btn{
+    position:relative;
+    float:right;
+    margin-right:-30px;
+}
+
+/*sampai sini bagian pop up */
+
+.card_feeling{
+    padding:10px;
+    margin:10px;
+    z-index:0;
+}
+
+.card1{
+    width:300px;
+    height:200px;
+}
+
+.foto_feeling{
+    margin-top:-100px;
+}
+.image_card{
+    width:100px;
+    margin-right:-10px;
+    position:relative;
+}
+
+.back_card{
+    width:300px;
+    height:200px;
+}
+
+
+
+
+<div class="menu_layanan">
+    <nav>
+        <a href="#">
+            <div class="menu_side" id="salary">
+                Salery Data
+            </div>
+        </a>
+        <a href="#">
+            <div class="menu_side" id="netflix">
+                Salery Data
+            </div>
+        </a>
+        <a href="#">
+            <div class="menu_side" id="penduduk">
+                Salery Data
+            </div>
+        </a>
+        <a href="#">
+            <div class="menu_side" id="last">
+                Salery Data
+            </div>
+        </a>
+    </nav>
+</div>
+<div class="pembatas_layanan">
+
+</div>
+<div class="content_layanan">
+    {% for message in messages %}
+    <div class="message_page">
+<!--        <img src="{% static 'image/icon/close.png' %}" alt="error" class="error_icon">-->
+        <div class="error_icon"><span>x</span></div>
+        <div class="close_icon"><button>x</button></div>
+        <div class="content_error">
+
+            <h5>!Error</h5>
+            <p>{{message}}</p>
+
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="sect_layanan hidden">
+        <div class="layanan_search ">
+            <form action="upload" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input class="name_file hiddenen" name="defaultss" id="name_filehide" value="{{Regust_url}}">
+                <input type="file" name="files_csv" id="key_layanan">
+                <button id="btn_proses" type="submit" class="button_layanan" >Proses</button>
+            </form>
+        </div>
+        <div class="panah_data" id="data_">
+            <span class="underlines"><hr></span>
+        </div>
+        <div class="button_analysis {{Regust_url}}">
+            <a href="#">
+                <div class="btn_analisis" id="salery" title="okes"><p>Tabel Data</p></div>
+            </a>
+            <a href="#">
+                <div class="btn_analisis" id="dua">Describe Data</div>
+            </a>
+            <a href="#">
+                <div class="btn_analisis" id="tiga">3</div>
+            </a>
+            <a href="#">
+                <div class="btn_analisis" id="empat">4</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="button_analysis">-->
+<!--            <a href="#">-->
+<!--                <div class="btn_analisis" id="salery">Tabel Data</div>-->
+<!--            </a>-->
+<!--            <a href="#">-->
+<!--                <div class="btn_analisis">Describe Data</div>-->
+<!--            </a>-->
+<!--            <a href="#">-->
+<!--                <div class="btn_analisis">3</div>-->
+<!--            </a>-->
+<!--            <a href="#">-->
+<!--                <div class="btn_analisis">4</div>-->
+<!--            </a>-->
+<!--        </div>-->

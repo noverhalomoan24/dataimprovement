@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Login
+{% endblock title %}
+{% block content%}
+    <body class="login-container">
+        <form class="login-form" method="POST">
+            {% csrf_token %}
+            <span>
+                Welcome
+            </span>
+            <div class="enter-email">
+                <input class="input-email" type="text" name="email">
+                <span class="focus-email"></span>
+            </div>
+            <div class="eneter-password">
+                <input class="input-password" type="text" name="email">
+                <span class="focus-password"></span>
+            </div>
+            <button class="btn btn-login" type="submit">Login</button>
+        </form>
+    </body>
+{% endblock content%}

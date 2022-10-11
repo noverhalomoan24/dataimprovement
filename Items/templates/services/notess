@@ -1,0 +1,36 @@
+<div class="product-story">
+                <img src="" alt="">
+                <h2 class="story-title">Penjelasan</h2>
+                <p class="cerita-content">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Debitis voluptates ab temporibus amet architecto facilis. Modi consectetur minima incidunt blanditiis magni hic tempore, eveniet doloribus, quis, ullam laborum corrupti. Laudantium.</p>
+            </div>
+            <!-- Story 2 -->
+            <div class="product-story">
+                <img src="" alt="">
+                <h2 class="story-title">Penjelasan</h2>
+                <p class="cerita-content">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Debitis voluptates ab temporibus amet architecto facilis. Modi consectetur minima incidunt blanditiis magni hic tempore, eveniet doloribus, quis, ullam laborum corrupti. Laudantium.</p>
+            </div>
+            <!-- Story 3 -->
+            <div class="product-story">
+                <img src="" alt="">
+                <h2 class="story-title">Penjelasan</h2>
+                <p class="cerita-content">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Debitis voluptates ab temporibus amet architecto facilis. Modi consectetur minima incidunt blanditiis magni hic tempore, eveniet doloribus, quis, ullam laborum corrupti. Laudantium.</p>
+            </div>
+            <!-- Story 4 -->
+            <div class="product-story">
+                <img src="" alt="">
+                <h2 class="story-title">Penjelasan</h2>
+                <p class="cerita-content">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Debitis voluptates ab temporibus amet architecto facilis. Modi consectetur minima incidunt blanditiis magni hic tempore, eveniet doloribus, quis, ullam laborum corrupti. Laudantium.</p>
+            </div>
+            <!-- Story 5 -->
+            <div class="product-story">
+                <img src="" alt="">
+                <h2 class="story-title">Penjelasan</h2>
+                <p class="cerita-content">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Debitis voluptates ab temporibus amet architecto facilis. Modi consectetur minima incidunt blanditiis magni hic tempore, eveniet doloribus, quis, ullam laborum corrupti. Laudantium.</p>
+            </div>
+            <!-- Story 6-->
+            <div class="product-story">
+                <img src="" alt="">
+                <h2 class="story-title">Penjelasan</h2>
+                <p class="cerita-content">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Debitis voluptates ab temporibus amet architecto facilis. Modi consectetur minima incidunt blanditiis magni hic tempore, eveniet doloribus, quis, ullam laborum corrupti. Laudantium.</p>
+            </div>
+        </div>

@@ -1,0 +1,98 @@
+.all_content{
+    margin-top:90px;
+}
+p{
+    font-size:20px;
+}
+h1,h2,h3{
+    font-size:35px;
+}
+
+a{
+    text-decoration:none;
+    color:black;
+}
+
+a:hover{
+    color:#CAD6E2;
+}
+
+/* Tabel */
+
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.customers tr:hover {background-color: #ddd;}
+
+.customers th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background:#000;
+  color: white;
+}
+
+.customers {
+  table-layout: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+td,th {
+  word-wrap: break-word;
+  border: 1px solid #ddd;
+  padding: 8px;
+  width:50px;
+}
+/*Table the end */
+.card-text{
+    font-size:14px;
+}
+
+.judul_content{
+    margin-top:100px;
+}
+.content_1{
+    margin-top:50px;
+}
+.content_2{
+    margin-top:30px;
+}
+.child1_content1{
+    margin-top:20px;
+}
+
+.number_content{
+    font-weight:bold;
+}
+
+
+.coding_content p{
+    font-size:16px;
+}
+
+.coding_content{
+    color:white;
+    width:auto;
+    height:auto;
+    padding:5px;
+    margin-bottom:10px;
+    font-size:12px;
+    padding-left:20px;
+    background-color:#2B2B2B;
+    border-radius:5px;
+}
+.image_coding{
+    justify-content:center;
+    text-align:center;
+    margin:0 auto;
+}
+.image_coding .barplot_salary{
+    width:70%;
+    height:40%;
+
+}
+.child_judul{
+    margin-left:20px;
+    font-weight:bold;
+    font-size:25px;
+}

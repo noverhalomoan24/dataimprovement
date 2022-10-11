@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block simantic %}
+    <link rel="stylesheet" type="text/css" href="{% static 'services/css/style.css'%}">
+{%endblock simantic%}
+
+
+
+{% block content%}
+    <div class="story container">
+        <div class="story-content">
+            <!-- Story 1 -->
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                        <a href="{% url 'salerystatic' %}">
+                        <img src="/static/services/img/Salary_of_Experience.svg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Visualization with python and example data (Salery Data)</h5>
+                            <p class="card-text"> Visualisasi data secara singkat menggunakan data salary untuk menganalisis pendapatan berdasarkan pengalaman kerja
+                            </p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+
+<!--                <div class="col">-->
+<!--                    <div class="card">-->
+<!--                        <img src="/static/services/img/image_1.jpg" class="card-img-top" alt="...">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Card title</h5>-->
+<!--                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+            </div>
+    </div>
+{% endblock content%}

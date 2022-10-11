@@ -1,0 +1,64 @@
+<div class="data_salery">
+<!--            {% for message in messages %}-->
+<!--                    <h5 class="message-error">{{message}}</h5>-->
+<!--            {% endfor %}-->
+            <div class="show_all_data">
+                <h4><u>Data Salery</u></h4>
+                <table style="width:300px;" id="customers" class="customers">
+                {% for x in Datas %}
+
+                    {% if x.YearsExperience == "YearsExperience" %}
+                    <thead>
+                    <tr>
+                        <th name="one" id="1" onclick="function_a(this.id)">{{x.YearsExperience}}</th>
+                        <th name="second" id="2" onclick="function_a(this.id)">{{x.Salary}}</th>
+                    </tr>
+                    </thead>
+                    {% else %}
+                    <tbody>
+                    <tr>
+                        <td>{{x.YearsExperience}}</td>
+                        <td>{{x.Salary}}</td>
+                    </tr>
+                    </tbody>
+                    {% endif %}
+                {% endfor %}
+                </table>
+            </div>
+            <div class="Proses_all_data">
+                <h4><u>Analisis Salery</u></h4>
+                <div class="table_desc">
+                    <table style="width:300px;" id="Desc_data" class="customers">
+                        {% for x in describe_data %}
+                        {% if x.header == "header" %}
+                        <tr>
+                            <th></th>
+                            <th>{{x.YearsExperience}}</th>
+                            <th>{{x.Salary}}</th>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td>{{x.header}}</td>
+                            <td>{{x.YearsExperience}}</td>
+                            <td>{{x.Salary}}</td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="show_plotly">
+        <div class="panah_data" id="image_">
+                <span class="underlines">><hr></span>
+        </div>
+        <div class="image_plotly">
+            <div class="image_analisis">
+<!--                <img src="/static/image/svg_histogram.svg" alt="oke">-->
+<!--                <object type="image/svg+xml" data="/static/image/svg_histogram.svg"></object>-->
+                <object type="image/svg+xml" data="/static/image/Salary_of_Experience.svg"></object>
+            </div>
+        </div>
+    </div>

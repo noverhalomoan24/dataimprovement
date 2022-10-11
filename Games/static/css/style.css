@@ -1,0 +1,9 @@
+.button_mulai{
+    width:70px;
+    height:35px;
+    background-color:red;
+    margin:10px;
+    border-radius:5px;
+    padding:5px;
+    padding-left:10px;
+}

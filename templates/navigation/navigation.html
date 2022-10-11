@@ -1,0 +1,28 @@
+{% load static %}
+<nav class="fixed-top">
+        <div class="menu-btn-1" onclick="menuBtnFunction(this)">
+            <span></span>
+        </div>
+        <label class="logo">{{context.title}}
+           <!-- <img src="/static/img/fococlipping-20220104-232724.png" />
+            <p>{{context.title}}</p> -->
+        </label>
+
+        <ul class="tab-menu hidden-play">
+            <li>
+                <a class="actovated" href="/">Home</a>
+            </li>
+<!--            <li>-->
+<!--                <a class="actovated" href="/Blog">About</a>-->
+<!--            </li>-->
+            <li>
+                <a class="actovated" href="/items">Story</a>
+            </li>
+            <li>
+                <a class="actovated" href="/service">Show Data</a>
+            </li>
+<!--            <li>-->
+<!--                <a class="actovated" href="#">Contact</a>-->
+<!--            </li>-->
+        </ul>
+    </nav>

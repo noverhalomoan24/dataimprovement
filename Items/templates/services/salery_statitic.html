@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block simantic %}
+    <link rel="stylesheet" type="text/css" href="{% static 'services/css/style.css'%}">
+{%endblock simantic%}
+
+
+{% block content%}
+<section class="all_content">
+    <div class="container">
+        <h3 class="judul_content">Analisis dan ploting Sederhana Terhdap Data Salary dan Work Experiences</h3>
+        <div class="row content_1">
+            <div class="col-md-auto">
+                <div class="class_tabel">
+                    <h5>Data Salery</h5>
+                        <table style="width:300px;" class="customers">
+                            {% for x in salary %}
+                                {% if x.YearsExperience == "YearsExperience" %}
+                                <thead>
+                                    <tr>
+                                        <th name="one" id="1" onclick="function_a(this.id)">{{x.YearsExperience}}</th>
+                                        <th name="second" id="2" onclick="function_a(this.id)">{{x.Salary}}($)</th>
+                                    </tr>
+                                </thead>
+                                {% else %}
+                                <tbody>
+                                    <tr>
+                                        <td>{{x.YearsExperience}}</td>
+                                        <td>{{x.Salary}}</td>
+                                    </tr>
+                                </tbody>
+                                {% endif %}
+                            {% endfor %}
+                        </table>
+                </div>
+            </div>
+            <div class="col child1_content1">
+                <div class="content_page">
+                    <p>
+                        Pada Tabel tersebut terlihat ada lima data yang ditampilkan, dari data yang ditampilkan tersebut kita dapat melihat
+                        bahwa terdapat dua columns yang terdiri dari column Year Experience dan column Salary. Pada column YearsExperience terhdapat angka yang berisikan jumlah berapa lama sesorang memiliki pengalaman kerja,
+                        kemudian pada column Salary terdapat informasi berapa besar gaji yang diperoleh berdasarkan pengalaman kerja.
+                    </p>
+                    <div class="coding_content">
+                        <p> import pandas as pd<br>
+                            import matplotlib.pyplot as plt<br>
+                            import seaborn as sns<br>
+                            df = pd.read_csv('/content/Data_salary.xls')<br>
+                            df.head(5)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row content_2">
+            <div class="col-md-auto">
+                <div class="class_tabel">
+                    <h5>Data Summary of Salery</h5>
+                        <table style="width:300px;" class="customers">
+                           {% for desc in desc_salary%}
+                              {% if desc.header == "header" %}
+                                 <tr>
+                                   <th></th>
+                                   <th>{{desc.YearsExperience}}</th>
+                                   <th>{{desc.Salary}}</th>
+                                 </tr>
+                              {% else %}
+                                 <tr>
+                                    <td>{{desc.header}}</td>
+                                    <td>{{desc.YearsExperience}}</td>
+                                   <td>{{desc.Salary}}</td>
+                                 </tr>
+                            {% endif %}
+                        {% endfor %}
+                   </table>
+                </div>
+            </div>
+            <div class="col">
+                <div class="content_2_paparan">
+                    <p>
+                        Pada tabel "Data Summary Of Salary", kita dapat melihat rangkuman data terhadap tabel "Data Salary", deskripsi data disini ini adalah langkah awal dalam menganalisis data dengan menggunakan
+                        pada fungsi python kita dapat menggunakan code seperti dibawah ini, untuk menghasilkan keluaran data seperti disamping.
+
+                    </p>
+                    <div class="coding_content">
+                        <p> df.describe() #df : adalah dataframe yang berisikan data sesuai tabel salary<br>
+                        df.describe().style.background_gradient(cmap='GnBu_r') #Style For Show Data</p>
+                    </div>
+                    <p>
+                        Beberapa informasi penting yang dapat kita ambil dari tabel detail summary, diantaranya : Julah data terlihat bahwa ada 30, kemudian Standart Deviasi(std) yang memiliki penyebaran data
+                        pada 2.8 untuk pengalaman kerja dan $27.414 untuk salary pada pengamatan rata-rata dalam table tersebut, kemudian kita bisa membaca jangkauan quartal dari 25% 50% dan 75% dan nilai min,max dan mean pada tabel tersebut.
+                    </p>
+                    <p>
+                        Jika kita uraikan data dari min, 25%, 50%, 75% dan max, kita akan melihat bentuk kuartal data yang mana menjelsakan bahwa
+                        data min ke 25% itu ada sebanyak 25% data yang berpengalaman antara 1.1 - 3.2, begitu juga dengan 50% ke 75% dan seterusnya.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row content_2_1">
+            <div class="col">
+                <div class="content_pages">
+                    <p>
+                        Langkah selanjutnya kita akan melakukan plotting data, dimana cara ini merupakan langkah awal yang digunakan para Analisis
+                        untuk menganalisis setiap data. Pada
+                    </p>
+                </div>
+                 <div class="coding_content">
+                        <p>
+                            plt.figure(figsize=(12,8))<br>
+                            ax = sns.barplot(data=df,x='YearsExperience',y='Salary',ci=None,palette="flare")<br>
+                            ax.get_yaxis().set_major_formatter(plt.FuncFormatter(lambda x, loc : "{:,}".format(int(x))))<br>
+                            ax.set(xlabel="Experience",ylabel="Salary",title="Salary of Experiences")<br>
+                            plt.tight_layout()
+                        </p>
+                 </div>
+                <div class="image_coding">
+                    <img src="{% static '/services/img/Salary_Base_Experiences.jpg' %}" alt="" class="barplot_salary">
+                </div>
+                <div class="content_pages">
+                    <p>
+                        Pada hasil plotting barplot diatas kita dapat melihat data yang ditampilkan mengalami peningkatan, dimana disini terlihat bahwa X_axis adalah bagian yang menunjukan
+                        pengalaman pekerjaan pertahun dan pada bagian Y_axis merupakan bagian jumlah pendapatan, semakin tinggi pengalaman maka semakin besar jumlah pendapatan.
+                    </p>
+                    <p>Selanjutnya kita akan akan melakukan plotting data menggunakan boxplot data pada masing-masing data.</p>
+                    <p><span class="child_judul">1. Boxplot Pada Data Salary</span></p>
+                </div>
+                <div class="coding_content">
+                        <p>
+                            sns.boxplot(y=df['Salary'])<br>
+                            plt.show()
+                        </p>
+                 </div>
+                <div class="image_coding">
+                    <img src="{% static '/services/img/Boxplot_Salary.jpg' %}" alt="" class="barplot_salary">
+                </div>
+                <div class="content_pages">
+                    <p><span class="child_judul">2. Boxplot Pada Data Pengalaman (Year Experience)</span></p>
+                </div>
+                <div class="coding_content">
+                        <p>
+                            sns.boxplot(y=df['YearsExperience'])<br>
+                            plt.show()
+                        </p>
+                 </div>
+                <div class="image_coding">
+                    <img src="{% static '/services/img/Boxplot_YearsExperience.jpg' %}" alt="" class="barplot_salary">
+                </div>
+                <div class="content_pages">
+                    <p>
+                        Pada kedua barplot diatas kita dapat melihat hasil deskripsi data yang telah divisualisasi, dalam
+                        visualisasi boxplot terlihat ringkasan distribusi sample yang disajikan secara grafis terhadap penyebaran data.
+                        Dari kesimpulan data boxplot diatas kita menyimpulkan bahwa data sangat baik untuk diolah dan terlihat pada dua boxplot diatas tidak adanya
+                        data yang outlier atau penyebaran data yang tidak beraturan.
+                    </p>
+                    <p>Selanjutnya kita akan melakukan visualisasi data untuk melihat colerasi antara kedua data,
+                        dimana plotting ini berfungsi untuk melihat keterhubungan satu variabel dengan variabel lainya.
+                    </p>
+                </div>
+                <div class="coding_content">
+                        <p>
+                            sns.heatmap(data=data_corr)<br>
+                            plt.show()
+                        </p>
+                 </div>
+                <div class="image_coding">
+                    <img src="{% static '/services/img/heatmap_salary.jpg' %}" alt="" class="heatmap_salary">
+                </div>
+                <div class="content_pages">
+                    <p>
+                        Terlihat pada data plotting Heatmap diatas bahwa tidak ada colleration atau hubungan antara kedua variabel, dimana
+                        hubungan antara keduanya tidak terlihat karena kedua data tersebut memiliki perbedaan data yang cukup jauh,
+                        seperti yang ditunjukan pada plotting Boxplot sebelumnya, bahwa data year memiliki nilai maximum 10.5 sedangkan salary nilai minumnya saja
+                        37731, dan jelas perbedaan data disini sangat terlihat jauh.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content%}

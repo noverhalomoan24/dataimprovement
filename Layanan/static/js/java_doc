@@ -1,0 +1,123 @@
+//var fileselect = document.getElementById("select_photos"),filelem = document.getElementById("fileElem"),
+//    upload_image = document.getElementById("profile_image");
+//
+//const pop_up_layanan = document.getElementById("pop_up_layanan");
+//
+//window.URL = window.URL || window.webkitURL;
+//
+//pop_up_layanan.addEventListener("click",()=>{
+//    pop_up_layanan.classList.toggle("hidden");
+//})
+//
+//fileselect.addEventListener("click",function(e){
+//    if(filelem){
+//        filelem.click();
+//    }
+//    e.preventDefault();
+//}, false);
+//
+//function handleFiles(files){
+//    if(!files.length){
+//        console.log("Data Kososng");
+//    }else{
+//        upload_image.src = window.URL.createObjectURL(files[0]);
+//        console.log(upload_image);
+//    }
+//}
+//
+//
+//
+
+function function_a(ax){
+    const table = document.getElementById("customers");
+    console.log(ax);
+    if(table != null){
+//        table.rows[0].cells[i].onclick = function(){
+//                console.log(table.rows[0].cells.length)
+//        };
+    }
+}
+
+
+var body = document.body,
+    html = document.documentElement;
+
+var height = Math.max( body.scrollHeight, body.offsetHeight,
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+var heigh_menu = document.querySelector(".menu_layanan");
+var content_layanan = document.querySelector(".content_layanan");
+var pembatas_height =document.querySelector(".pembatas_layanan");
+var name_filehide = document.getElementById("name_filehide");
+var ly_button =document.querySelectorAll(".menu_side");
+var button_layanan = document.getElementById("btn_proses");
+const panah_dt = document.querySelectorAll(".panah_data");
+var sect_layanan = document.querySelector(".sect_layanan");
+
+/*Ketetapan */
+heigh_menu.style.height = height+"px";
+pembatas_height.style.height= height+"px";
+
+console.log(button_layanan)
+
+/*button proses click */
+
+document.querySelector(".button_analysis").classList.remove("hidden")
+
+//if(!heigh_menu.classList.contains("hidden")){
+//    console.log("Iya")
+//    message_page = document.querySelector(".message_page")
+//    message_page.style.marginLeft="40%";
+//}
+
+
+ly_button.forEach(item =>{
+    item.addEventListener('click',event=>{
+        document.querySelector(".sect_layanan").classList.remove("hidden")
+        document.getElementById("name_filehide").value = event.srcElement.id;
+    })
+})
+
+/*Pembatas antara menu data dan view data */
+pembatas_height.addEventListener('click',()=>{
+    heigh_menu.classList.toggle("hidden");
+    if(heigh_menu.classList.contains("hidden")){
+        pembatas_height.style.margin =0;
+        content_layanan.style.paddingLeft=0;
+
+    }
+    else{
+        content_layanan.style.paddingLeft="200px";
+        pembatas_height.style.marginLeft ="15%";
+    }
+
+})
+
+
+
+
+
+//panah_dt.forEach(item =>{
+//    item.addEventListener('click',event =>{
+//        const hiden_data = document.querySelector(".data_salery")
+//        const image_data = document.querySelector(".image_plotly")
+//        if(item.id =="image_")
+//        {
+//            image_data.classList.toggle("hidden");
+//        }else{
+//            hiden_data.classList.toggle("hidden");
+//        }
+//        console.log(item.id)
+//    });
+//});
+
+
+
+
+//panah_dt.addEventListener("click",(event)=>{
+//    const hiden_data = document.querySelector(".data_salery")
+//    hiden_data.classList.toggle("hidden");
+//    console.log("bisa")
+//});
+
+

@@ -1,0 +1,138 @@
+
+.menu_layanan{
+    width:15%;
+    float:left;
+    margin-right:20px;
+    background-color:#CAD6E2;
+}
+
+.pembatas_layanan{
+    height:20px;
+    width:5px;
+    margin-left:15%;
+    background-color:#A6A6A6;
+    position:absolute;
+    cursor:e-resize;
+    transition: width ease .6s;
+
+}
+.menu_side{
+    padding:10px;
+    border-bottom:1px solid white;
+
+}
+.menu_layanan a{
+    text-decoration:none;
+    color:black;
+}
+.message_page{
+    margin-top:0px;
+    margin-left:40%;
+    width:300px;
+    height:80px;
+    border-radius:5px;
+    background-color:red;
+}
+
+.message_page .close_icon{
+    position:absolute;
+    color:white;
+    float:right;
+    margin-left:286px;
+}
+.close_icon button{
+    background:red;
+    text-decoration:none;
+    color:white;
+    margin-top:-5px;
+    border:none;
+}
+.message_page .content_error{
+    margin-top:20px;
+    padding-left:50px;
+    color:white;
+    padding-top:10px;
+}
+.content_error h5{
+    font-size:16px;
+    font-weight:bold;
+}
+.content_error p{
+    font-size:12px;
+    margin-top:-5px;
+}
+.error_icon{
+    position:absolute;
+    color:red;
+    width:20px;
+    height:20px;
+    background-color:white;
+    border-radius:10px;
+    margin-top:30px;
+    margin-left:20px;
+}
+.error_icon span{
+    position:absolute;
+    margin-top:-3px;
+    margin-left:7px;
+}
+
+
+
+
+
+
+/*visibility:hidden;*/
+.hiddenen{
+    visibility:hidden;
+    width:0px;
+    transition: width ease .6s;
+}
+
+.hidden{
+  display:none;
+  opacity: 0 ;
+  transition: clip-path 2s;
+}
+
+
+#key_layanan{
+    margin-top:5%;
+    width :300px;
+
+}
+
+.button_layanan{
+    width:100px;
+    height:30px;
+    border:none;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    border-radius:5px;
+    background: black;
+}
+
+.for_button{
+    margin-top:50px;
+}
+.bar{
+    fill:green;
+}
+
+/* Create a for BAR*/
+.bar:hover{
+  fill:red;
+}
+
+.messages{
+    color:red;
+    display: inline-block;
+    font-style:italic;
+}
+
+.message_layanan{
+    margin-left:10px;
+}
+
+
